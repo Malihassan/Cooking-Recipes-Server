@@ -62,7 +62,7 @@ const getRecipes = async (req, res, next) => {
   let { page = 1 } = req.query;
   const options = {
     page: page,
-    limit: 1,
+    limit: 4,
   };
   const recipes = await recipesModel.paginate({}, options);
   res.json(recipes);
